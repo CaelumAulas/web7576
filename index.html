@@ -28,14 +28,14 @@
         Ceep
       </h1>
       <div class="opcoesDaPagina">
-        <input type="search" placeholder="busca" id="busca" class="opcoesDaPagina-opcao">
-        <button id="btnMudaLayout" class="opcoesDaPagina-opcao opcoesDaPagina-botao">
+        <input type="search" placeholder="busca" id="busca" class="opcoesDaPagina-opcao no-js">
+        <button id="btnMudaLayout" class="opcoesDaPagina-opcao opcoesDaPagina-botao no-js">
           Linhas
         </button>
-        <button id="btnAjuda" class="opcoesDaPagina-opcao opcoesDaPagina-botao">
+        <button id="btnAjuda" class="opcoesDaPagina-opcao opcoesDaPagina-botao no-js">
           ?
         </button>
-        <button id="btnSync" class="opcoesDaPagina-opcao opcoesDaPagina-botao botaoSync botaoSync--sincronizado">
+        <button id="btnSync" class="opcoesDaPagina-opcao opcoesDaPagina-botao botaoSync botaoSync--sincronizado no-js">
           <svg class="botaoSync-icone">
             <use xlink:href="#iconeSincronizar"></use>
           </svg>
@@ -43,16 +43,16 @@
       </div>
     </header>
 
-    <form class="formNovoCartao container">
+    <form class="formNovoCartao container no-js">
       <textarea class="formNovoCartao-conteudo" name="formNovoCartao-conteudo" placeholder="Digite aqui"></textarea>
       <input class="formNovoCartao-salvar" type="submit" value="Salvar">
     </form>
 
     <section class="container mural" style="font-size: 1.3rem;">
  
-      <article id="cartao_1" class="cartao">
+      <article tabindex="0" id="cartao_1" class="cartao">
         <div class="opcoesDoCartao">
-          <button onclick="this.parentNode.parentNode.remove()" class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0">
+          <button class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0">
             <svg><use xlink:href="#iconeRemover"></use></svg>
           </button>
 
@@ -79,7 +79,7 @@
         <p class="cartao-conteudo" contenteditable tabindex="0">Bem vindo ao Ceep!</p>
       </article>
 
-      <article id="cartao_2" class="cartao">
+      <article tabindex="0" id="cartao_2" class="cartao">
         <div class="opcoesDoCartao">
           <button class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0">
             <svg><use xlink:href="#iconeRemover"></use></svg>
@@ -108,7 +108,7 @@
         <p class="cartao-conteudo" contenteditable tabindex="0">o site é otimizado para celulares!</p>
       </article>
 
-      <article id="cartao_3" class="cartao">
+      <article tabindex="0" id="cartao_3" class="cartao">
         <div class="opcoesDoCartao">
           <button class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0">
             <svg><use xlink:href="#iconeRemover"></use></svg>
@@ -139,5 +139,7 @@
 
     </section>
     <script src="js/opcoesDaPagina/btnMudaLayout.js" type="text/javascript"></script> 
+    <script src="js/opcoesDoCartao/remove.js" type="text/javascript"></script>
+    <script src="js/cartao.js" type="text/javascript"></script>
   </body>
 </html>
