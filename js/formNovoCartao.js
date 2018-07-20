@@ -1,24 +1,31 @@
 ;(function(){
     
-    const form = document.querySelector('.formNovoCartao')
+    const form = document.querySelector('.formNovoCartao'),
+          textarea = form.querySelector('textarea')
 
     form.addEventListener('submit', function(evento){
         evento.preventDefault()
         
-        const textarea = form.querySelector('textarea'),
-              //btn = form.querySelector('.formNovoCartao-salvar'),
-              mensagem = document.createElement('p')
+        const mensagem = document.createElement('p')
 
         if(textarea.value.trim() != ''){
-            console.log('vou criar um cartao com',textarea.value);
+            criarCartao(textarea.value)
+            this.reset()
         }
         else {
             mensagem.innerText = 'oww preenche ai'
-            //form.insertBefore(mensagem, btn)
-            textarea.insertAdjacentElement('afterend',mensagem);
+            mensagem.classList.add('formNovoCartao-msg')
+            
+            //se nao existir cria o elemento
+            if(!this.querySelector('.formNovoCartao-msg')){
+                textarea.insertAdjacentElement('afterend',mensagem);
+            }
 
-            //textarea.insertAdjacentHTML('beforebegin', '<h1>heheh errou</h1>')
-            //textarea.insertAdjacentText('afterbegin', 'oww digitaqui manee')
+            this.addEventListener('animationend', function(evento){
+                evento.target.remove()
+            })
+
+
         }    
     })
 
