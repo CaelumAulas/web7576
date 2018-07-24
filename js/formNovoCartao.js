@@ -9,7 +9,7 @@
         const mensagem = document.createElement('p')
 
         if(textarea.value.trim() != ''){
-            criarCartao(textarea.value)
+            criarCartao({conteudo: textarea.value})
             this.reset()
         }
         else {
