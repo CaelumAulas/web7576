@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Var e Let</title>
+</head>
+<body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+<script>
+    var escola = 'Caelum'
+
+    if(escola){
+        let escola = 'Alura'
+    }
+
+    function teste (){
+        let escola = 'Casa do codigo'
+        console.log(escola);
+    }
+
+    //arrow function
+    () => {
+        
+    }
+
+    let titulos = document.querySelectorAll('h1')
+
+    titulos.forEach(function(titulo){
+        titulo.innerText = 'oi'
+
+        console.log(this, 'escopo do foreach');
+
+        titulo.addEventListener('click', (evento) => {
+            evento.target
+            console.log(this, 'escopo do evento');
+        })
+    });
+
+</script>
+</body>
+</html>

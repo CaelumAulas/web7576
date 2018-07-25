@@ -1,0 +1,27 @@
+{
+  "name": "web7576",
+  "version": "1.0.0",
+  "description": "Ceep da caelum",
+  "main": "",
+  "scripts": {
+    "watch": "node_modules/.bin/babel src --out-dir dist --copy-files --watch --presets env",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanessametonini/web7576.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vanessametonini/web7576/issues"
+  },
+  "homepage": "https://github.com/vanessametonini/web7576#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}

@@ -8,6 +8,15 @@
     
         const mural = document.querySelector('.mural'),
               cartao = document.createElement('article')
+
+        if(!objetoCartao.cor){
+
+            objetoCartao = {
+                conteudo: objetoCartao.conteudo,
+                cor: '#EBEF40'
+            }
+            
+        }
     
         cartao.classList.add('cartao')
         cartao.id = `cartao_${idCartao}`
@@ -79,8 +88,13 @@
         mural.insertAdjacentElement('afterbegin', cartao)    
 
         //seleciona o elemento que tiver a mesma cor do objeto passado por parametro e define ele como checked
-        if(objetoCartao.cor){
+        
+        let cartaoTemCorDiferente = cartao.querySelector(`input[value='${objetoCartao.cor}']`)
+        
+        if(cartaoTemCorDiferente){
             cartao.querySelector(`input[value='${objetoCartao.cor}']`).checked = true
+        } else {
+            cartao.querySelector(`#corPadrão-cartao${idCartao}`).removeAttribute('checked')
         }
     
         idCartao++
