@@ -11,6 +11,7 @@
         if(textarea.value.trim() != ''){
             criarCartao({conteudo: textarea.value})
             this.reset()
+            textarea.focus()
         }
         else {
             mensagem.innerText = 'oww preenche ai'
