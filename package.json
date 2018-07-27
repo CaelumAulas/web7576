@@ -4,6 +4,7 @@
   "description": "Ceep da caelum",
   "main": "",
   "scripts": {
+    "gulp": "node_modules/.bin/gulp",
     "watch": "node_modules/.bin/babel src --out-dir dist --copy-files --watch --presets env",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +24,19 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "*",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "*",
+    "gulp-csscomb": "*",
+    "gulp-merge-media-queries": "*",
+    "gulp-minify-html": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "uglify-js": "^3.4.5"
   }
 }

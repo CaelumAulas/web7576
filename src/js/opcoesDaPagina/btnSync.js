@@ -5,7 +5,7 @@
         btnSync.classList.add('botaoSync--esperando')
         btnSync.classList.remove('botaoSync--sincronizado')
         
-        const cartoes = document.querySelectorAll('.cartao')
+      /*   const cartoes = document.querySelectorAll('.cartao')
              ,cartoesObj = []
 
         cartoes.forEach(cartao => {
@@ -19,6 +19,19 @@
             })
                       
         })
+        */
+
+        
+        const cartoesObj = Array
+                                .from(document.querySelectorAll('.cartao'))
+                                .map(
+                                    cartao => {
+                                        return {
+                                            conteudo: cartao.querySelector('.conteudo-cartao').innerText
+                                            ,cor: cartao.querySelector('.opcoesDoCartao-radioTipo:checked').value
+                                        }
+                                    }
+                                )
 
         const conectorApi = new XMLHttpRequest()
 
